@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/Game-Search/static/js/main.97e9c4b8.chunk.js",
-    "main.js.map": "/Game-Search/static/js/main.97e9c4b8.chunk.js.map",
-    "runtime-main.js": "/Game-Search/static/js/runtime-main.651bf8ad.js",
-    "runtime-main.js.map": "/Game-Search/static/js/runtime-main.651bf8ad.js.map",
-    "static/js/2.101d1563.chunk.js": "/Game-Search/static/js/2.101d1563.chunk.js",
-    "static/js/2.101d1563.chunk.js.map": "/Game-Search/static/js/2.101d1563.chunk.js.map",
-    "static/js/3.7bd5fb5c.chunk.js": "/Game-Search/static/js/3.7bd5fb5c.chunk.js",
-    "static/js/3.7bd5fb5c.chunk.js.map": "/Game-Search/static/js/3.7bd5fb5c.chunk.js.map",
+    "main.js": "/Game-Search/static/js/main.45627193.chunk.js",
+    "main.js.map": "/Game-Search/static/js/main.45627193.chunk.js.map",
+    "runtime-main.js": "/Game-Search/static/js/runtime-main.83b4c9dc.js",
+    "runtime-main.js.map": "/Game-Search/static/js/runtime-main.83b4c9dc.js.map",
+    "static/js/2.4f789d96.chunk.js": "/Game-Search/static/js/2.4f789d96.chunk.js",
+    "static/js/2.4f789d96.chunk.js.map": "/Game-Search/static/js/2.4f789d96.chunk.js.map",
+    "static/js/3.1abdb6c0.chunk.js": "/Game-Search/static/js/3.1abdb6c0.chunk.js",
+    "static/js/3.1abdb6c0.chunk.js.map": "/Game-Search/static/js/3.1abdb6c0.chunk.js.map",
     "index.html": "/Game-Search/index.html",
-    "static/js/2.101d1563.chunk.js.LICENSE.txt": "/Game-Search/static/js/2.101d1563.chunk.js.LICENSE.txt"
+    "static/js/2.4f789d96.chunk.js.LICENSE.txt": "/Game-Search/static/js/2.4f789d96.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.651bf8ad.js",
-    "static/js/2.101d1563.chunk.js",
-    "static/js/main.97e9c4b8.chunk.js"
+    "static/js/runtime-main.83b4c9dc.js",
+    "static/js/2.4f789d96.chunk.js",
+    "static/js/main.45627193.chunk.js"
   ]
 }
