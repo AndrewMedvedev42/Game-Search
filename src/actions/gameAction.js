@@ -9,8 +9,8 @@ const loadGames = () => async (dispatch) => {
         type:"FETCH_GAMES",
         payload:{
             popular: popularData.data.results,
-            newgames: upcomingData.data.results,
-            upcoming: newData.data.results,
+            newgames: newData.data.results,
+            upcoming: upcomingData.data.results
         }
     })
 }

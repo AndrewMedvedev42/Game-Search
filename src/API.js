@@ -24,7 +24,7 @@ const currentDay = getCurrentDay()
 const currentDate = `${currentYear}-${currentMonth}-${currentDay}`
 const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`
 const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`
-
+//GAME DATA
 const popular_Games = `games?key=${process.env.REACT_APP_RAWG_API_KEY}&dates=${lastYear},${currentDate}&ordering=-rating&page_size=10?`
 const upcomming_Games = `games?key=${process.env.REACT_APP_RAWG_API_KEY}&dates=${currentDate},${nextYear}&ordering=-added&page_size=10?`
 const new_Games = `games?key=${process.env.REACT_APP_RAWG_API_KEY}&dates=${lastYear},${currentDate}&ordering=-released&page_size=10?`
@@ -32,3 +32,6 @@ const new_Games = `games?key=${process.env.REACT_APP_RAWG_API_KEY}&dates=${lastY
 export const popularGamesURL = () => `${base_url}${popular_Games}`
 export const upcomingGamesURL = () => `${base_url}${upcomming_Games}`
 export const newGamesURL = () => `${base_url}${new_Games}`
+//GAME DETAILS
+export const gameDetailsURL = (game_id) => `${base_url}games/${game_id}?key=${process.env.REACT_APP_RAWG_API_KEY}`
+export const gameScreenshotURL = (game_id) => `${base_url}games/${game_id}/screenshots?key=${process.env.REACT_APP_RAWG_API_KEY}`
