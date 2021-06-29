@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/Game-Search/static/js/main.66394b6c.chunk.js",
-    "main.js.map": "/Game-Search/static/js/main.66394b6c.chunk.js.map",
+    "main.js": "/Game-Search/static/js/main.040b7d2b.chunk.js",
+    "main.js.map": "/Game-Search/static/js/main.040b7d2b.chunk.js.map",
     "runtime-main.js": "/Game-Search/static/js/runtime-main.ce0fc1f2.js",
     "runtime-main.js.map": "/Game-Search/static/js/runtime-main.ce0fc1f2.js.map",
-    "static/js/2.aac6b6f5.chunk.js": "/Game-Search/static/js/2.aac6b6f5.chunk.js",
-    "static/js/2.aac6b6f5.chunk.js.map": "/Game-Search/static/js/2.aac6b6f5.chunk.js.map",
+    "static/js/2.80199827.chunk.js": "/Game-Search/static/js/2.80199827.chunk.js",
+    "static/js/2.80199827.chunk.js.map": "/Game-Search/static/js/2.80199827.chunk.js.map",
     "static/js/3.ecdd562d.chunk.js": "/Game-Search/static/js/3.ecdd562d.chunk.js",
     "static/js/3.ecdd562d.chunk.js.map": "/Game-Search/static/js/3.ecdd562d.chunk.js.map",
     "index.html": "/Game-Search/index.html",
-    "static/js/2.aac6b6f5.chunk.js.LICENSE.txt": "/Game-Search/static/js/2.aac6b6f5.chunk.js.LICENSE.txt"
+    "static/js/2.80199827.chunk.js.LICENSE.txt": "/Game-Search/static/js/2.80199827.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ce0fc1f2.js",
-    "static/js/2.aac6b6f5.chunk.js",
-    "static/js/main.66394b6c.chunk.js"
+    "static/js/2.80199827.chunk.js",
+    "static/js/main.040b7d2b.chunk.js"
   ]
 }
