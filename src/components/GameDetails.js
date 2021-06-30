@@ -8,13 +8,17 @@ import {useSelector} from "react-redux"
 
 
 const GameDetails = () => {
-    const {gameDetails, gameScreenshots} = useSelector((state) => state.gameDetails)
+    const {gameDetails, gameScreenshots, isLoading} = useSelector((state) => state.gameDetails)
     return(
+        <section>
+        {!isLoading && (
         <CardShow>
             <Detail>
                 <h1>{gameDetails.name}</h1>
             </Detail>
         </CardShow>
+        )}
+        </section>
     )}
 
 const CardShow = styled(motion.div)`
