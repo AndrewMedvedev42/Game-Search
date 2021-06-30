@@ -4,6 +4,7 @@ import {gameDetailsURL, gameScreenshotURL} from "../API"
 const loadDetail = (id) => async (dispatch) => {
     const detailData = await axios.get(gameDetailsURL(id))
     const screenshotData = await axios.get(gameScreenshotURL(id))
+    console.log(`detailAction recived id: ${id}`);
     dispatch({
         type:"GET_DETAIL",
         payload:{

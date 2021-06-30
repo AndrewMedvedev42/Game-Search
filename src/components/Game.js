@@ -5,7 +5,8 @@ import {motion} from "framer-motion"
 //REDUX
 import {useDispatch, useSelector} from "react-redux"
 import loadDetail from "../actions/detailAction"
-
+//REACT_ROUTER_DOM
+import {Link} from "react-router-dom"
 
 const Game = ({name, released, id, image}) => {
     const dispatch = useDispatch()
@@ -15,9 +16,12 @@ const Game = ({name, released, id, image}) => {
     }
     return(
         <SlotGame key={id} onClick={loadDeatilHandler}>
-            <img src={image} alt={name}/>
-            <h3>{name}</h3>
-            <p>{released}</p>
+            <Link to={`/game/${id}`}>
+                <img src={image} alt={name}/>
+                <h3>{name}</h3>
+                <p>{released}</p>
+            </Link>
+
         </SlotGame>
     )
 }
