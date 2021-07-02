@@ -10,6 +10,14 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         width: 100%;
     }
+    .gameTitle{
+        font-size: 2rem;
+        text-align: center;
+    }
+    p{
+        font-size: 1.2rem;
+        margin: 2rem;
+    }
 `
 
 export default GlobalStyles

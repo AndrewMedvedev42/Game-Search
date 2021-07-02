@@ -4,7 +4,7 @@ import {combineReducers} from "redux"
 
 const rootReducers = combineReducers({
     games: gameReducer,
-    gameDetails:detailReducer
+    game_details:detailReducer
 })
 
 export default rootReducers
