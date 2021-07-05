@@ -1,4 +1,5 @@
 import React from "react";
+import {useHistory} from "react-router-dom"
 //STYLES AND ANIMATION
 import styled from "styled-components"
 import {motion} from "framer-motion"
@@ -8,11 +9,22 @@ import {useSelector} from "react-redux"
 
 
 const GameDetails = () => {
+    const history = useHistory()
+    //EXIT DEATIL
+    const exitDetailHandler = (e) => {
+        const element = e.target;
+        console.log(element);
+        if(element.classList.contains("45DF23!")){
+            document.body.style.overflow = 'auto'
+            history.push("/")
+        }
+    }
+    //DATA
     const {gameDetails, gameScreenshots, isLoading} = useSelector((state) => state.game_details)
     return(
         <section>
         {!isLoading && (
-        <CardShow>
+        <CardShow className="45DF23!" onClick={exitDetailHandler}>
             <Detail>
             <article>
                 <h1 className="gameTitle">{gameDetails.name}</h1>
@@ -25,7 +37,7 @@ const GameDetails = () => {
                         <h2>Platforms:</h2>
                         {
                             gameDetails.platforms.map((item)=>{
-                                return <h3>{item.platform.name}</h3>
+                                return <h3 className="platform">{item.platform.name}</h3>
                             })
                         }
                     </div>
@@ -60,16 +72,24 @@ const CardShow = styled(motion.div)`
     top:0;
     left:0;
     .gameDetailsContainer{
+        margin:1rem;
         display: flex;
-        margin:3rem;
-        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
     }
     h2{
         padding: 0px;
+        color:grey;
+    }
+    h3{
+        margin:0rem 1rem;
+        color:darkgrey;
     }
     .ratingContainer, .platformContainer{
+        margin: 1rem;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         padding: 0;
     }
     .backGroundImage{
@@ -79,7 +99,7 @@ const CardShow = styled(motion.div)`
     }
     .screenshot{
         width: 90%;
-        margin: 1rem;
+        margin: 0.5rem;
     }
     .screenshotContainer{
         display: flex;
