@@ -1,5 +1,7 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
+//COMPONENTS
+import {smallImage} from "../util"
 //STYLES AND ANIMATION
 import styled from "styled-components"
 import {motion} from "framer-motion"
@@ -8,7 +10,9 @@ import {useSelector} from "react-redux"
 // import loadDetail from "../actions/detailAction"
 
 
-const GameDetails = () => {
+const GameDetails = ({pathID}) => {
+    console.log(pathID);
+
     const history = useHistory()
     //EXIT DEATIL
     const exitDetailHandler = (e) => {
@@ -25,16 +29,14 @@ const GameDetails = () => {
         <section>
         {!isLoading && (
         <CardShow className="45DF23!" onClick={exitDetailHandler}>
-            <Detail>
+            <Detail layoutId={pathID}>
             <article>
                 <h1 className="gameTitle">{gameDetails.name}</h1>
                 <section className="gameDetailsContainer">
                     <div className="ratingContainer">
-                        <h2>Rating: </h2>
-                        <h3>{gameDetails.rating} / {gameDetails.rating_top}</h3>
+                        <h3>Rating: {gameDetails.rating} / {gameDetails.rating_top}</h3>
                     </div>
                     <div className="platformContainer">
-                        <h2>Platforms:</h2>
                         {
                             gameDetails.platforms.map((item)=>{
                                 return <h3 className="platform">{item.platform.name}</h3>
@@ -43,7 +45,7 @@ const GameDetails = () => {
                     </div>
                 </section>
             </article>
-                <img className="backGroundImage" src={gameDetails.background_image}/>
+                <img className="backGroundImage" src={smallImage(gameDetails.background_image, 1280) }/>
             <section>
                 <p>{gameDetails.description_raw}</p>
             </section>
@@ -52,7 +54,7 @@ const GameDetails = () => {
                 <div className="screenshotContainer">
                     {
                         gameScreenshots.results.map((item)=>{
-                            return <img key={item.id} className="screenshot" src={item.image}/>
+                            return <img key={item.id} className="screenshot" src={smallImage(item.image, 1280) }/>
                         })
                     }
                 </div>

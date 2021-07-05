@@ -7,7 +7,7 @@ import Game from "../components/Game"
 import GameDetails from "../components/GameDetails"
 //STYLES AND ANIMATION
 import styled from "styled-components"
-import {motion} from "framer-motion"
+import {motion, AnimatePresence, AnimateSharedLayout} from "framer-motion"
 //REACT_ROUTER_DOM
 import {useLocation} from "react-router-dom"
 
@@ -15,6 +15,7 @@ const Home = () => {
     //CURRENT LOCATION
         const location = useLocation()
         const pathID = location.pathname.split("/")[2]
+        console.log(pathID);
     //FETCH GAMES
         const dispatch = useDispatch()
         useEffect(()=>{
@@ -24,7 +25,9 @@ const Home = () => {
         const {popular, newGames, upComing} = useSelector((state) => state.games)
     return(
         <GameList>
-            {pathID && <GameDetails/>}
+            {/* <AnimateSharedLayout type="crossfade">
+            <AnimatePresence>{pathID && <GameDetails pathID={pathID}/>}</AnimatePresence> */}
+            {pathID && <GameDetails pathID={pathID}/>}
             <h2>Up Coming</h2>
             <Games>
                 {upComing.map((item) => {
@@ -46,6 +49,7 @@ const Home = () => {
                     return <Game key={id} name={name} released={released} id={id} image={background_image}/>
                 })}
             </Games>
+            {/* </AnimateSharedLayout> */}
         </GameList>
     ) 
 }
