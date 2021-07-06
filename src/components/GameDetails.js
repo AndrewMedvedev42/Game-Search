@@ -7,8 +7,9 @@ import styled from "styled-components"
 import {motion} from "framer-motion"
 //REDUX
 import {useSelector} from "react-redux"
-// import loadDetail from "../actions/detailAction"
-
+//IMAGES
+import FullStars from "../img/Full_Star.jpeg"
+import EmptyStars from "../img/Empty_Stars.jpeg"
 
 const GameDetails = ({pathID}) => {
     console.log(pathID);
@@ -23,6 +24,22 @@ const GameDetails = ({pathID}) => {
             history.push("/")
         }
     }
+
+    const getStars = () => {
+        const stars = []
+        const rating = Math.floor(gameDetails.rating)
+        for(let i = 1; i <= 5; i++){
+            if(i <= rating){
+                console.log("full");
+                stars.push(<img className="ratingStar" alt="full" key={i} src={FullStars}/>)
+            }else{
+                console.log("empty");
+                stars.push(<img className="ratingStar" alt="empty" key={i} src={EmptyStars}></img>)
+            }
+        }
+        return stars
+    }
+
     //DATA
     const {gameDetails, gameScreenshots, isLoading} = useSelector((state) => state.game_details)
     return(
@@ -35,6 +52,7 @@ const GameDetails = ({pathID}) => {
                 <section className="gameDetailsContainer">
                     <div className="ratingContainer">
                         <h3>Rating: {gameDetails.rating} / {gameDetails.rating_top}</h3>
+                        {getStars()}
                     </div>
                     <div className="platformContainer">
                         {
@@ -53,9 +71,10 @@ const GameDetails = ({pathID}) => {
                 <h2>Screenshots</h2>
                 <div className="screenshotContainer">
                     {
+                        
                         gameScreenshots.results.map((item)=>{
                             return <img key={item.id} className="screenshot" src={smallImage(item.image, 1280) }/>
-                        })
+                        })              
                     }
                 </div>
             </section>
@@ -93,6 +112,9 @@ const CardShow = styled(motion.div)`
         align-items: center;
         flex-wrap: wrap;
         padding: 0;
+    }
+    .ratingStar{
+        width: 1.5rem;
     }
     .backGroundImage{
         width: 100%;
