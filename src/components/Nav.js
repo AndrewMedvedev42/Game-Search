@@ -32,18 +32,25 @@ const Nav = styled(motion.div)`
     display: flex;
     justify-content:center;
     input, button{
-        margin: 0 1rem;
-        border-radius:25px;
+        color:#1a1a1a;
         font-size: 1.5rem;
         padding:0.5rem 1rem;
-        border: none;
-        border:0.1px solid black;
+        border:#bfbfbf 1px solid;
+    }
+    input{
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
     }
     button{
-        border:none;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        transition: 0.5s;
+        border-left: none;
+        background-color: white;
     }
     button:hover{
+        cursor: pointer;
         color:white;
-        background: grey;
+        background: #333333;
     }
 `

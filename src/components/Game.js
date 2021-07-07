@@ -23,7 +23,7 @@ const Game = ({name, released, id, image}) => {
     }
     return(
         <SlotGame layoutId={stringPathId} key={id} onClick={loadDeatilHandler}>
-            <Link to={`/game/${id}`}>
+            <Link className="link" to={`/game/${id}`}>
                 <img src={smallImage(image, 640)} alt={name}/>
                 <h3>{name}</h3>
                 <p>{released}</p>
@@ -34,19 +34,27 @@ const Game = ({name, released, id, image}) => {
 }
 
 const SlotGame = styled(motion.div)`
+    overflow: hidden;
     margin: 1rem;
-    padding: 1rem;
+    padding-bottom: 1rem;
     text-align: center;
     border-radius: 1rem;
-    box-shadow: 2px 2px 5px grey;
+    border-top: none;
+    box-shadow:grey 2px 2px 10px;
     img{
         width: 100%;
     }
+    .link{
+        color: #1a1a1a;
+        text-decoration: none;
+    }
     h3{
-        font-weight: 400;
+        margin: 1rem;
+        font-weight: 800;
     }
     p{
-        font-weight: 800;
+        margin:0.5rem;
+        font-weight: 400;
     }
 `;
 

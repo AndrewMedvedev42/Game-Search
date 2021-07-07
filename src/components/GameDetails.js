@@ -8,8 +8,8 @@ import {motion} from "framer-motion"
 //REDUX
 import {useSelector} from "react-redux"
 //IMAGES
-import FullStars from "../img/Full_Star.jpeg"
-import EmptyStars from "../img/Empty_Stars.jpeg"
+import FullStars from "../img/Full_Star.png"
+import EmptyStars from "../img/Empty_Stars.png"
 
 const GameDetails = ({pathID}) => {
     console.log(pathID);

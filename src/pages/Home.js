@@ -29,8 +29,8 @@ const Home = () => {
             <AnimatePresence>{pathID && <GameDetails pathID={pathID}/>}</AnimatePresence> */}
             {pathID && <GameDetails pathID={pathID}/>}
             {searched.length ? (
-                <div>
-                    <h2>Searched</h2>
+                <div className="searchedGamesContainer">
+                    <h2 className="Title">Searched</h2>
                     <Games>
                         {searched.map((item) => {
                             const {name, released, id, background_image} = item
@@ -40,21 +40,21 @@ const Home = () => {
                 </div>
             ) : ""}
 
-            <h2>Up Coming</h2>
+            <h2 className="Title">Up Coming</h2>
             <Games>
                 {upComing.map((item) => {
                     const {name, released, id, background_image} = item
                     return <Game key={id} name={name} released={released} id={id} image={background_image}/>
                 })}
             </Games>
-            <h2>Popular</h2>
+            <h2 className="Title">Popular</h2>
             <Games>
                 {popular.map((item) => {
                     const {name, released, id, background_image} = item
                     return <Game key={id} name={name} released={released} id={id} image={background_image}/>
                 })}
             </Games>
-            <h2>New Games</h2>
+            <h2 className="Title">New Games</h2>
             <Games>
                 {newGames.map((item) => {
                     const {name, released, id, background_image} = item
@@ -68,11 +68,17 @@ const Home = () => {
 
 const GameList = styled(motion.div)`
     padding: 0 5rem;
+    .Title{
+    }
     h2{
+        color: #1a1a1a;
+        font-size: 2.5rem;
         padding:5rem 0;
     }
 `;
 const Games = styled(motion.div)`
+    margin: 0;
+    padding: 0;
     min-height:80vh;
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

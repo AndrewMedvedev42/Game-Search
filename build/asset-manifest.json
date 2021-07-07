@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/Game-Search/static/js/main.ca46a7a6.chunk.js",
-    "main.js.map": "/Game-Search/static/js/main.ca46a7a6.chunk.js.map",
+    "main.js": "/Game-Search/static/js/main.cb28297e.chunk.js",
+    "main.js.map": "/Game-Search/static/js/main.cb28297e.chunk.js.map",
     "runtime-main.js": "/Game-Search/static/js/runtime-main.d66bbc50.js",
     "runtime-main.js.map": "/Game-Search/static/js/runtime-main.d66bbc50.js.map",
     "static/js/2.84b968a6.chunk.js": "/Game-Search/static/js/2.84b968a6.chunk.js",
@@ -9,11 +9,13 @@
     "static/js/3.b8a8c64e.chunk.js": "/Game-Search/static/js/3.b8a8c64e.chunk.js",
     "static/js/3.b8a8c64e.chunk.js.map": "/Game-Search/static/js/3.b8a8c64e.chunk.js.map",
     "index.html": "/Game-Search/index.html",
-    "static/js/2.84b968a6.chunk.js.LICENSE.txt": "/Game-Search/static/js/2.84b968a6.chunk.js.LICENSE.txt"
+    "static/js/2.84b968a6.chunk.js.LICENSE.txt": "/Game-Search/static/js/2.84b968a6.chunk.js.LICENSE.txt",
+    "static/media/Empty_Stars.fd2b9eaa.png": "/Game-Search/static/media/Empty_Stars.fd2b9eaa.png",
+    "static/media/Full_Star.bc04972e.png": "/Game-Search/static/media/Full_Star.bc04972e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d66bbc50.js",
     "static/js/2.84b968a6.chunk.js",
-    "static/js/main.ca46a7a6.chunk.js"
+    "static/js/main.cb28297e.chunk.js"
   ]
 }
