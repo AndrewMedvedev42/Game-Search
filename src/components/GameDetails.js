@@ -63,7 +63,7 @@ const GameDetails = ({pathID}) => {
                     </div>
                 </section>
             </article>
-                <img className="backGroundImage" src={smallImage(gameDetails.background_image, 1280) }/>
+                <img className="backGroundImage" src={smallImage(gameDetails.background_image, 1280)}/>
             <section>
                 <p>{gameDetails.description_raw}</p>
             </section>
@@ -73,7 +73,7 @@ const GameDetails = ({pathID}) => {
                     {
                         
                         gameScreenshots.results.map((item)=>{
-                            return <img key={item.id} className="screenshot" src={smallImage(item.image, 1280) }/>
+                            return <img key={item.id} className="screenshot" src={smallImage(item.image, 1280)}/>
                         })              
                     }
                 </div>

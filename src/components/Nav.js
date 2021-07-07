@@ -1,15 +1,28 @@
-import React from "react";
+import {React, useState} from "react";
 //STYLES AND ANIMATION
 import styled from "styled-components"
 import {motion} from "framer-motion"
+//REDUX AND ROUTES
+import {loadSearch} from "../actions/gameAction"
+import {useDispatch} from "react-redux"
 //IMAGES
 export const Navigation = () => {
+
+    const [gameName, setGameName] = useState("")
+    const  onChange = (e) => {
+        setGameName(e.target.value)
+    }
+    const dispatch = useDispatch()
+    const submitSearch = (e) => {
+        e.preventDefault()
+        dispatch(loadSearch(gameName))
+    }
     return (
         <Nav>
-            <div className="inputContainer">
-                <input type="text"></input>
-                <button>Search</button>
-            </div>
+            <form className="inputContainer">
+                <input value={gameName} onChange={onChange} type="text"></input>
+                <button onClick={submitSearch} type="submit">Search</button>
+            </form>
         </Nav>
     )
 }

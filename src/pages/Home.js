@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 //Redux
 import {useDispatch, useSelector} from "react-redux"
-import loadGames from "../actions/gameAction"
+import {loadGames} from "../actions/gameAction"
 //Components
 import Game from "../components/Game"
 import GameDetails from "../components/GameDetails"
@@ -22,12 +22,24 @@ const Home = () => {
         dispatch(loadGames())
         },[dispatch])
     //GET THE DATA
-        const {popular, newGames, upComing} = useSelector((state) => state.games)
+        const {popular, newGames, upComing, searched} = useSelector((state) => state.games)
     return(
         <GameList>
             {/* <AnimateSharedLayout type="crossfade">
             <AnimatePresence>{pathID && <GameDetails pathID={pathID}/>}</AnimatePresence> */}
             {pathID && <GameDetails pathID={pathID}/>}
+            {searched.length ? (
+                <div>
+                    <h2>Searched</h2>
+                    <Games>
+                        {searched.map((item) => {
+                            const {name, released, id, background_image} = item
+                            return <Game key={id} name={name} released={released} id={id} image={background_image}/>
+                        })}
+                    </Games>
+                </div>
+            ) : ""}
+
             <h2>Up Coming</h2>
             <Games>
                 {upComing.map((item) => {
