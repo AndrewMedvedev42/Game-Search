@@ -25,3 +25,9 @@ export const loadSearch = (game) => async (dispatch) => {
     })
 }
 
+export const deleteSearch = () => async (dispatch) => {
+    dispatch({
+        type:"CLOSE_SEARCHED",
+    })
+}
+

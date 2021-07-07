@@ -13,7 +13,6 @@ import EmptyStars from "../img/Empty_Stars.png"
 
 const GameDetails = ({pathID}) => {
     console.log(pathID);
-
     const history = useHistory()
     //EXIT DEATIL
     const exitDetailHandler = (e) => {
