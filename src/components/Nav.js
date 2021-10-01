@@ -34,7 +34,7 @@ const Nav = styled(motion.div)`
     input, button{
         color:#1a1a1a;
         font-size: 1.5rem;
-        padding:0.5rem 1rem;
+        padding:1rem 2rem;
         border:#bfbfbf 1px solid;
     }
     input{
@@ -52,5 +52,10 @@ const Nav = styled(motion.div)`
         cursor: pointer;
         color:white;
         background: #333333;
+    }
+    button:active{
+        cursor: pointer;
+        color:white;
+        background: #000000;
     }
 `
