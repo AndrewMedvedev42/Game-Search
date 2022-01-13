@@ -9,6 +9,8 @@
     import thunk from "redux-thunk" 
 //REACT_ROUTER
     import {BrowserRouter as Router} from "react-router-dom"
+//CSS STYLES 
+    import "./index.css";
 
 const composeEnchancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 

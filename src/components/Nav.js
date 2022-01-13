@@ -19,9 +19,9 @@ export const Navigation = () => {
     }
     return (
         <Nav>
-            <form className="inputContainer">
+            <form className="input-container">
                 <input value={gameName} onChange={onChange} type="text"></input>
-                <button onClick={submitSearch} type="submit">Search</button>
+                <button className="input-submit-button" onClick={submitSearch} type="submit">Search</button>
             </form>
         </Nav>
     )
@@ -33,15 +33,17 @@ const Nav = styled(motion.div)`
     justify-content:center;
     input, button{
         color:#1a1a1a;
-        font-size: 1.5rem;
+        font-size: 1rem;
         padding:1rem 2rem;
         border:#bfbfbf 1px solid;
     }
     input{
+        width:70%;
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
     }
     button{
+        width:30%;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
         transition: 0.5s;

@@ -34,6 +34,8 @@ const Game = ({name, released, id, image}) => {
 }
 
 const SlotGame = styled(motion.div)`
+display: inline-block;
+    column-break-inside: avoid;
     overflow: hidden;
     margin: 1rem;
     padding-bottom: 1rem;

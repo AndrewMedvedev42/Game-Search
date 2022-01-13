@@ -33,36 +33,36 @@ const Home = () => {
             <AnimatePresence>{pathID && <GameDetails pathID={pathID}/>}</AnimatePresence> */}
             {pathID && <GameDetails pathID={pathID}/>}
             {searched.length ? (
-                <div className="searchedGamesContainer">
-                    <div className="inputform">
-                        <h2 className="Title">Searched</h2>
-                        <button className="closeBtn" onClick={hideSearchedGames}>Close Results</button>
-                    </div>
+                <section className="searched-games-container">
+                    <nav className="input-form">
+                        <h2 className="title">Searched</h2>
+                        <button className="close-button" onClick={hideSearchedGames}>Close Results</button>
+                    </nav>
                     <Games>
                         {searched.map((item) => {
                             const {name, released, id, background_image} = item
                             return <Game key={id} name={name} released={released} id={id} image={background_image}/>
                         })}
                     </Games>
-                </div>
+                </section>
             ) : ""}
 
-            <h2 className="Title">Up Coming</h2>
-            <Games>
+            <h2 className="title">Up Coming</h2>
+            <Games className="games-list">
                 {upComing.map((item) => {
                     const {name, released, id, background_image} = item
                     return <Game key={id} name={name} released={released} id={id} image={background_image}/>
                 })}
             </Games>
-            <h2 className="Title">Popular</h2>
-            <Games>
+            <h2 className="title">Popular</h2>
+            <Games className="games-list">
                 {popular.map((item) => {
                     const {name, released, id, background_image} = item
                     return <Game key={id} name={name} released={released} id={id} image={background_image}/>
                 })}
             </Games>
-            <h2 className="Title">New Games</h2>
-            <Games>
+            <h2 className="title">New Games</h2>
+            <Games className="games-list">
                 {newGames.map((item) => {
                     const {name, released, id, background_image} = item
                     return <Game key={id} name={name} released={released} id={id} image={background_image}/>
@@ -74,10 +74,8 @@ const Home = () => {
 }
 
 const GameList = styled(motion.div)`
-    padding: 0 5rem;
-    .Title{
-    }
-    .closeBtn{
+    padding: 0 1rem;
+    .close-button{
         background-color: white;
         color:#1a1a1a;
         font-size: 1.5rem;
@@ -86,29 +84,25 @@ const GameList = styled(motion.div)`
         border-radius:25px;
         transition: 0.5s;
     }
-    .closeBtn:hover{
+    .close-button:hover{
         cursor: pointer;
         color:white;
         background: #333333;
     }
-    h2{
+    .title{
         color: #1a1a1a;
         font-size: 2.5rem;
         margin:5rem 0;
     }
-    .inputform{
+    .input-form{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
 `;
 const Games = styled(motion.div)`
     margin: 0;
     padding: 0;
-    min-height:80vh;
-    display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    align-items: center;
 `;
 
 

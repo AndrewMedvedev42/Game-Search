@@ -1,0 +1,30 @@
+.input-container{
+    width:40%;
+}
+.games-list{
+    column-count: 3;
+    column-gap: 15px;
+    column-fill: auto;
+}
+
+@media screen and (max-width: 900px) {
+    .input-container{
+        width: 100%;
+    }
+    .games-list{
+        column-count: 2;
+        column-gap: 15px;
+        column-fill: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .input-container{
+        width: 100%;
+    }
+    .games-list{
+        column-count: 1;
+        column-gap: 15px;
+        column-fill: auto;
+    }
+}

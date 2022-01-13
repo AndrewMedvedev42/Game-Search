@@ -131,13 +131,14 @@ const CardShow = styled(motion.div)`
     }
 `
 const Detail = styled(motion.div)`
-    width: 80%;
+    width: 90%;
     border-radius: 25px;
-    margin:2rem;
+    margin-top:2rem;
     padding: 2rem;
     background:white;
     position: absolute;
-    left:10%;
+    left: 50%;
+    transform: translateX(-50%)
 
 `
 export default GameDetails
