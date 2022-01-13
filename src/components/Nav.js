@@ -34,7 +34,7 @@ const Nav = styled(motion.div)`
     input, button{
         color:#1a1a1a;
         font-size: 1rem;
-        padding:1rem 2rem;
+        padding:1rem 1rem;
         border:#bfbfbf 1px solid;
     }
     input{

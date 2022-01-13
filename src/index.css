@@ -7,6 +7,10 @@
     column-fill: auto;
 }
 
+.section{
+    padding: 0 3rem;
+}
+
 @media screen and (max-width: 900px) {
     .input-container{
         width: 100%;
@@ -27,4 +31,8 @@
         column-gap: 15px;
         column-fill: auto;
     }
+    .section{
+        padding: 0 1rem;
+    }
 }
+

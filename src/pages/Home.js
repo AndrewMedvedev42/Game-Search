@@ -28,7 +28,7 @@ const Home = () => {
             dispatch(deleteSearch())
         }
     return(
-        <GameList>
+        <GameList className="section">
             {/* <AnimateSharedLayout type="crossfade">
             <AnimatePresence>{pathID && <GameDetails pathID={pathID}/>}</AnimatePresence> */}
             {pathID && <GameDetails pathID={pathID}/>}
@@ -38,7 +38,7 @@ const Home = () => {
                         <h2 className="title">Searched</h2>
                         <button className="close-button" onClick={hideSearchedGames}>Close Results</button>
                     </nav>
-                    <Games>
+                    <Games className="games-list">
                         {searched.map((item) => {
                             const {name, released, id, background_image} = item
                             return <Game key={id} name={name} released={released} id={id} image={background_image}/>
@@ -74,7 +74,6 @@ const Home = () => {
 }
 
 const GameList = styled(motion.div)`
-    padding: 0 1rem;
     .close-button{
         background-color: white;
         color:#1a1a1a;

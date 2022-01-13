@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/Game-Search/static/css/main.cfd2747e.chunk.css",
-    "main.js": "/Game-Search/static/js/main.9a9ba728.chunk.js",
-    "main.js.map": "/Game-Search/static/js/main.9a9ba728.chunk.js.map",
-    "runtime-main.js": "/Game-Search/static/js/runtime-main.51fee823.js",
-    "runtime-main.js.map": "/Game-Search/static/js/runtime-main.51fee823.js.map",
-    "static/js/2.4d022fe2.chunk.js": "/Game-Search/static/js/2.4d022fe2.chunk.js",
-    "static/js/2.4d022fe2.chunk.js.map": "/Game-Search/static/js/2.4d022fe2.chunk.js.map",
-    "static/js/3.93799a9a.chunk.js": "/Game-Search/static/js/3.93799a9a.chunk.js",
-    "static/js/3.93799a9a.chunk.js.map": "/Game-Search/static/js/3.93799a9a.chunk.js.map",
-    "index.html": "/Game-Search/index.html",
-    "static/css/main.cfd2747e.chunk.css.map": "/Game-Search/static/css/main.cfd2747e.chunk.css.map",
-    "static/js/2.4d022fe2.chunk.js.LICENSE.txt": "/Game-Search/static/js/2.4d022fe2.chunk.js.LICENSE.txt",
-    "static/media/Empty_Stars.fd2b9eaa.png": "/Game-Search/static/media/Empty_Stars.fd2b9eaa.png",
-    "static/media/Full_Star.bc04972e.png": "/Game-Search/static/media/Full_Star.bc04972e.png"
+    "main.css": "/static/css/main.aa708da2.chunk.css",
+    "main.js": "/static/js/main.12bc25da.chunk.js",
+    "main.js.map": "/static/js/main.12bc25da.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.edfc9cdf.js",
+    "runtime-main.js.map": "/static/js/runtime-main.edfc9cdf.js.map",
+    "static/js/2.1a68314c.chunk.js": "/static/js/2.1a68314c.chunk.js",
+    "static/js/2.1a68314c.chunk.js.map": "/static/js/2.1a68314c.chunk.js.map",
+    "static/js/3.93799a9a.chunk.js": "/static/js/3.93799a9a.chunk.js",
+    "static/js/3.93799a9a.chunk.js.map": "/static/js/3.93799a9a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.aa708da2.chunk.css.map": "/static/css/main.aa708da2.chunk.css.map",
+    "static/js/2.1a68314c.chunk.js.LICENSE.txt": "/static/js/2.1a68314c.chunk.js.LICENSE.txt",
+    "static/media/Empty_Stars.fd2b9eaa.png": "/static/media/Empty_Stars.fd2b9eaa.png",
+    "static/media/Full_Star.bc04972e.png": "/static/media/Full_Star.bc04972e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.51fee823.js",
-    "static/js/2.4d022fe2.chunk.js",
-    "static/css/main.cfd2747e.chunk.css",
-    "static/js/main.9a9ba728.chunk.js"
+    "static/js/runtime-main.edfc9cdf.js",
+    "static/js/2.1a68314c.chunk.js",
+    "static/css/main.aa708da2.chunk.css",
+    "static/js/main.12bc25da.chunk.js"
   ]
 }
