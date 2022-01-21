@@ -1,7 +1,9 @@
 import axios from "axios"
 import {gameDetailsURL, gameScreenshotURL} from "../API"
 
+//GET GAME DETAILS
 const loadDetail = (id) => async (dispatch) => {
+    //SETS STATE LOADING_DETAILS TO CREATE SIDEEFFECT
     dispatch({
         type:"LOADING_DETAIL"
     })

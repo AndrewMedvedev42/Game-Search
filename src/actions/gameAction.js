@@ -1,6 +1,7 @@
 import axios from "axios"
 import {popularGamesURL, upcomingGamesURL, newGamesURL, searchGameURL} from "../API"
 
+//GET POPULAR, IPCOMMING AND NEW GAMES
 export const loadGames = () => async (dispatch) => {
     const popularData = await axios.get(popularGamesURL())
     const upcomingData = await axios.get(upcomingGamesURL())
@@ -15,6 +16,7 @@ export const loadGames = () => async (dispatch) => {
     })
 }
 
+//GET SEARCHED GAMES
 export const loadSearch = (game) => async (dispatch) => {
     const searchedData = await axios.get(searchGameURL(game))
     dispatch({
@@ -25,6 +27,7 @@ export const loadSearch = (game) => async (dispatch) => {
     })
 }
 
+//REMOVE SEARCHED GAMES FROM STATE
 export const deleteSearch = () => async (dispatch) => {
     dispatch({
         type:"CLOSE_SEARCHED",
