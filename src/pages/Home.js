@@ -15,23 +15,22 @@ const Home = () => {
     //CURRENT LOCATION
         const location = useLocation()
         const pathID = location.pathname.split("/")[2]
-        console.log(pathID);
-    //FETCH GAMES
+    //FETCH GAMES AND STORE THEM INTO games STATE
         const dispatch = useDispatch()
         useEffect(()=>{
         dispatch(loadGames())
         },[dispatch])
-    //GET THE DATA
+    //GET THE DATA FROM games STATE
         const {popular, newGames, upComing, searched} = useSelector((state) => state.games)
-    //CLOSE SEARCHED GAMES
+    //SEND ACTION TO CLOSE SEARCHED GAMES
         const hideSearchedGames = () => {
             dispatch(deleteSearch())
         }
     return(
         <GameList className="section">
-            {/* <AnimateSharedLayout type="crossfade">
-            <AnimatePresence>{pathID && <GameDetails pathID={pathID}/>}</AnimatePresence> */}
+            {/* IF PATH HAS GAME ID, SHOW GAME DETAILS MODAL*/}
             {pathID && <GameDetails pathID={pathID}/>}
+            {/* SEARCHED GAMES SECTION */}
             {searched.length ? (
                 <section className="searched-games-container">
                     <nav className="input-form">
@@ -46,7 +45,7 @@ const Home = () => {
                     </Games>
                 </section>
             ) : ""}
-
+            {/* UP COMMING GAMES SECTION */}
             <h2 className="title">Up Coming</h2>
             <Games className="games-list">
                 {upComing.map((item) => {
@@ -54,6 +53,7 @@ const Home = () => {
                     return <Game key={id} name={name} released={released} id={id} image={background_image}/>
                 })}
             </Games>
+            {/* POPULAR GAMES SECTION */}
             <h2 className="title">Popular</h2>
             <Games className="games-list">
                 {popular.map((item) => {
@@ -61,6 +61,7 @@ const Home = () => {
                     return <Game key={id} name={name} released={released} id={id} image={background_image}/>
                 })}
             </Games>
+            {/* NEW GAMES SECTION */}
             <h2 className="title">New Games</h2>
             <Games className="games-list">
                 {newGames.map((item) => {
@@ -68,11 +69,11 @@ const Home = () => {
                     return <Game key={id} name={name} released={released} id={id} image={background_image}/>
                 })}
             </Games>
-            {/* </AnimateSharedLayout> */}
         </GameList>
     ) 
 }
 
+//STYLES WITH STYLE COMPONENTS
 const GameList = styled(motion.div)`
     .close-button{
         background-color: white;

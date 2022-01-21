@@ -24,22 +24,21 @@ const GameDetails = ({pathID}) => {
         }
     }
 
+    //CREATES GRAPHIC RATING WITH STARS
     const getStars = () => {
         const stars = []
         const rating = Math.floor(gameDetails.rating)
         for(let i = 1; i <= 5; i++){
             if(i <= rating){
-                console.log("full");
                 stars.push(<img className="ratingStar" alt="full" key={i} src={FullStars}/>)
             }else{
-                console.log("empty");
                 stars.push(<img className="ratingStar" alt="empty" key={i} src={EmptyStars}></img>)
             }
         }
         return stars
     }
 
-    //DATA
+    //GAME DETAILS DATA
     const {gameDetails, gameScreenshots, isLoading} = useSelector((state) => state.game_details)
     return(
         <section>
@@ -82,7 +81,8 @@ const GameDetails = ({pathID}) => {
         )}
         </section>
     )}
-
+    
+//STYLES WITH STYLE COMPONENTS
 const CardShow = styled(motion.div)`
     width: 100%;
     min-height: 100vh;

@@ -5,14 +5,16 @@ import {motion} from "framer-motion"
 //REDUX AND ROUTES
 import {loadSearch} from "../actions/gameAction"
 import {useDispatch} from "react-redux"
-//IMAGES
-export const Navigation = () => {
 
+
+export const Navigation = () => {
     const [gameName, setGameName] = useState("")
     const  onChange = (e) => {
         setGameName(e.target.value)
     }
     const dispatch = useDispatch()
+
+    //SUBMIT ACTION TO GET GAMES BY USER INPUT
     const submitSearch = (e) => {
         e.preventDefault()
         dispatch(loadSearch(gameName))
@@ -27,6 +29,7 @@ export const Navigation = () => {
     )
 }
 
+//STYLES WITH STYLE COMPONENTS
 const Nav = styled(motion.div)`
     margin: 2rem;
     display: flex;

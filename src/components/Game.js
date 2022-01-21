@@ -13,16 +13,16 @@ import {Link} from "react-router-dom"
 
 const Game = ({name, released, id, image}) => {
     const stringPathId = id.toString()
-    //LOAD DETAIL HANDLER
+    //LOAD DETAILS HANDLER
     const dispatch = useDispatch()
-    const loadDeatilHandler = () => {
+    const loadDetailHandler = () => {
         console.log(typeof stringPathId);
         document.body.style.overflow = 'hidden'
         console.log(id);
         dispatch(loadDetail(id))
     }
     return(
-        <SlotGame layoutId={stringPathId} key={id} onClick={loadDeatilHandler}>
+        <SlotGame layoutId={stringPathId} key={id} onClick={loadDetailHandler}>
             <Link className="link" to={`/game/${id}`}>
                 <img src={smallImage(image, 640)} alt={name}/>
                 <h3>{name}</h3>
